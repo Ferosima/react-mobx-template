@@ -1,4 +1,4 @@
-# Getting Started with Create React App
+# Simple template based on `TypeScript`, `React`, `MobX`, `React-Router`, `Sass`.
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
