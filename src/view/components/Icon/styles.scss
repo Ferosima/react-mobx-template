@@ -1,0 +1,23 @@
+.icons {
+    &-icon {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+  
+      &::before {
+        width: 100% !important;
+        margin: 0 !important;
+      }
+    }
+  }
+  .icon {
+    &-techlog {
+      text-align: center;
+  
+      &::before {
+        min-width: 24px !important;
+        max-width: 24px !important;
+      }
+    }
+  }
+  

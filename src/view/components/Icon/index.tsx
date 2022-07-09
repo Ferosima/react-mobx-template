@@ -1,6 +1,6 @@
 import { Component, ReactNode, useCallback, useMemo } from 'react';
 import { IconsId } from 'src/assets/icons/fonts/icons';
-import './style.scss';
+import './styles.scss';
 
 interface Props {
   id?: string;
@@ -12,7 +12,7 @@ interface Props {
   className?: string;
   disabledClassName?: string;
   style?: object;
-  children: ReactNode;
+  children?: ReactNode;
 }
 
 function Icon({ id, name, color, size, disabled, onPress, className, style, disabledClassName, children }: Props) {
