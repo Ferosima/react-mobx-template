@@ -5,7 +5,8 @@ import LandingScreen from './screens/LandingScreen';
 import AuthScreen from './screens/AuthScreen';
 import { SCREENS } from 'src/common/constants/screens';
 import NoMatchScreen from './screens/NoMatchScreen';
-import { RequireAuth } from './components/RequireAuth';
+import { PrivateComponent } from './components/PrivateComponent';
+import AppScreen from './screens/AppScreen';
 
 type Props = {};
 
@@ -21,9 +22,9 @@ const Router = (props: Props) => {
         <Route path={SCREENS.AUTH()} element={<AuthScreen />} />
 
         {/* Private Routes */}
-        <Route element={<RequireAuth />}>
+        <Route element={<PrivateComponent />}>
           {/* Application */}
-          <Route path={SCREENS.APP()} element={<LandingScreen />} />
+          <Route path={SCREENS.APP()} element={<AppScreen />} />
         </Route>
 
         {/* 404 */}
