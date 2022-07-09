@@ -1,25 +1,46 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React, { useEffect, useState } from 'react';
+import RootView from './view/RootView';
+import { create as createHydrator } from 'mobx-persist';
+import { STORES } from './mobx/index';
+import { Provider } from 'mobx-react';
 
 function App() {
+  const [loading, setLoading] = useState(false);
+
+  useEffect(() => {
+    loadSources();
+  }, []);
+
+  const loadSources = async () => {
+    setLoading(true);
+    await hydrateStores();
+    setLoading(false);
+  };
+
+  const hydrate = createHydrator({
+    storage: localStorage,
+    jsonify: true,
+  });
+
+  const hydrateStores = async () => {
+    // hydrate all stores
+    await Promise.all(
+      Object.entries(STORES).map(async ([key, store]) => {
+        if (!store) return;
+        await hydrate(key, store);
+        if (store.afterHydration) {
+          await store.afterHydration();
+        }
+      })
+    );
+  };
+
+  if (loading) return <h1>LOADING</h1>;
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Provider {...STORES}>
+      <RootView />
+    </Provider>
   );
 }
 

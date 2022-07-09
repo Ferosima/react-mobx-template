@@ -1,0 +1,46 @@
+:root {
+  --primary: #ffae73;
+  --secondary: #f1f1f1;
+  --dark: rgb(29, 29, 29);
+  --plane: rgb(29, 29, 29);
+  --red: red;
+  --light: #f1f1f1;
+  --gray: #b6b6b6;
+  --darkgray: #6d6d6d;
+  --lightgray: #c6c6c6;
+  --danger: #ff6d6d;
+  --white: #ffffff;
+  --lightdanger: #fff7f8;
+}
+
+$primary: #ffae73;
+$secondary: #f1f1f1;
+$dark: rgb(29, 29, 29);
+$plane: rgb(29, 29, 29);
+$red: red;
+$light: #f1f1f1;
+$gray: #b6b6b6;
+$darkgray: #6d6d6d;
+$lightgray: #c6c6c6;
+$danger: #ff6d6d;
+$white: #ffffff;
+$lightdanger: #fff7f8;
+$colors: (
+  'primary': $primary,
+  'secondary': $secondary,
+  'dark': $dark,
+  'plane': $plane,
+  'red': $red,
+  'light': $light,
+  'gray': $gray,
+  'darkgray': $darkgray,
+  'lightgray': $lightgray,
+  'danger': $danger,
+  'white': $white,
+  'lightdanger': $lightdanger,
+);
+
+
+$control-large: 60;
+$control-medium: 52;
+$control_small: 44px;

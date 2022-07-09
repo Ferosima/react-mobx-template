@@ -1,0 +1,426 @@
+.family-black {
+  font-family: 'Black';
+}
+
+.family-extrabold {
+  font-family: 'ExtraBold';
+}
+
+.family-bold {
+  font-family: 'Bold';
+}
+
+.family-semibold {
+  font-family: 'SemiBold';
+}
+
+.family-regular {
+  font-family: 'Regular';
+}
+
+.family-light {
+  font-family: 'Light';
+}
+
+.family-extralight {
+  font-family:'ExtraLight';
+}
+
+.uppercase {
+  text-transform: uppercase;
+}
+
+.lowercase {
+  text-transform: lowercase;
+}
+
+.text {
+  &-center {
+    text-align: center;
+  }
+
+  &-left {
+    text-align: left;
+  }
+
+  &-right {
+    text-align: right;
+  }
+
+  &-elipsis {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+
+  &-nowrap {
+    white-space: nowrap;
+  }
+
+  &-pointer {
+    cursor: pointer;
+  }
+
+  &-uppercase {
+    text-transform: uppercase;
+  }
+
+  &-through {
+    text-decoration: line-through;
+  }
+
+  &-size {
+    &-10 {
+      font-size: 10px;
+      line-height: 12px;
+    }
+
+    &-12 {
+      font-size: 12px;
+      line-height: 16px;
+    }
+
+    &-14 {
+      font-size: 14px;
+      line-height: 18px;
+    }
+
+    &-16 {
+      font-size: 16px;
+      line-height: 22px;
+    }
+
+    &-18 {
+      font-size: 18px;
+      line-height: 25px;
+    }
+
+    &-20 {
+      font-size: 20px;
+      line-height: 27px;
+    }
+
+    &-24 {
+      font-size: 24px;
+      line-height: 33px;
+    }
+  }
+}
+
+@each $name, $color in $colors {
+  .color {
+    &-#{$name} {
+      color: $color;
+      color: var(--#{$name}, $color);
+    }
+
+    &_hover {
+      &-#{$name} {
+        &:hover {
+          color: $color;
+          color: var(--#{$name}, $color);
+        }
+      }
+    }
+
+    &_active {
+      &-#{$name}.active {
+        color: $color;
+        color: var(--#{$name}, $color);
+      }
+    }
+  }
+
+  .border {
+    &-#{$name} {
+      border-color: $color;
+      border-color: var(--#{$name}, $color);
+    }
+
+    &_hover {
+      &-#{$name} {
+        &:hover {
+          border-color: $color;
+          border-color: var(--#{$name}, $color);
+        }
+      }
+    }
+
+    &_active {
+      &-#{$name}.active {
+        border-color: $color;
+        border-color: var(--#{$name}, $color);
+      }
+    }
+  }
+
+  .background {
+    &-#{$name} {
+      background-color: $color;
+      background-color: var(--#{$name}, $color);
+    }
+
+    &_hover {
+      &-#{$name} {
+        &:hover {
+          background-color: $color;
+          background-color: var(--#{$name}, $color);
+        }
+      }
+    }
+
+    &_active {
+      &-#{$name}.active {
+        background-color: $color;
+        background-color: var(--#{$name}, $color);
+      }
+    }
+
+    @if $name== 'primary' {
+      &_pseudo {
+        &-#{$name} {
+          &::after,
+          &::before {
+            background-color: $color;
+            background-color: var(--#{$name}, $color);
+          }
+        }
+      }
+    }
+  }
+}
+
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  font-family: 'Regular';
+  user-select: none;
+  -webkit-tap-highlight-color: transparent;
+}
+
+thead,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: 'SemiBold';
+}
+
+h1 {
+  font-size: 36px;
+  line-height: 49px;
+  letter-spacing: 0.02em;
+}
+
+h2 {
+  font-size: 26px;
+  line-height: 35px;
+  letter-spacing: 0.02em;
+}
+
+h3 {
+  font-size: 14px;
+  line-height: 19px;
+  letter-spacing: 0.05em;
+}
+
+h4 {
+  font-size: 13px;
+  line-height: 17px;
+  letter-spacing: 0.05em;
+}
+
+h4 {
+  font-size: 12px;
+  line-height: 16px;
+  letter-spacing: 0.05em;
+}
+
+p {
+  font-size: 16px;
+  line-height: 22px;
+}
+
+b,
+strong {
+  font-family: Bold !important;
+}
+
+.template {
+  word-break: break-word;
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6,
+  p,
+  span,
+  b,
+  li,
+  a {
+    font-family: inherit;
+  }
+
+  p {
+    margin: 15px 0;
+  }
+
+  i {
+    font-style: italic !important;
+  }
+
+  b {
+    font-family: Bold !important;
+  }
+
+  u {
+    text-decoration: underline;
+  }
+
+  a {
+    text-decoration: underline;
+  }
+
+  ul {
+    list-style: disc;
+    margin-left: 40px;
+  }
+
+  ol {
+    list-style: decimal;
+    margin-left: 40px;
+  }
+}
+
+@media (max-width: 1023px) {
+  h1 {
+    font-size: 24px;
+    line-height: 36px;
+    letter-spacing: 0.02em;
+  }
+
+  .text-md {
+    &-center {
+      text-align: center;
+    }
+
+    &-left {
+      text-align: left;
+    }
+
+    &-right {
+      text-align: right;
+    }
+
+    &-size {
+      &-8 {
+        font-size: 8px;
+        line-height: 11px;
+      }
+
+      &-10 {
+        font-size: 10px;
+        line-height: 12px;
+      }
+
+      &-12 {
+        font-size: 12px;
+        line-height: 16px;
+      }
+
+      &-14 {
+        font-size: 14px;
+        line-height: 18px;
+      }
+
+      &-16 {
+        font-size: 16px;
+        line-height: 22px;
+      }
+
+      &-18 {
+        font-size: 18px;
+        line-height: 25px;
+      }
+
+      &-20 {
+        font-size: 20px;
+        line-height: 27px;
+      }
+    }
+  }
+}

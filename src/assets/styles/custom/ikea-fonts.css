@@ -1,0 +1,24 @@
+@font-face {
+    font-family: 'Light';
+    src: url(../../../../public/media/fonts/Ikea/NotoIKEAArabic_Latin-Regular.woff) format('truetype');
+}
+@font-face {
+    font-family: 'Regular';
+    src: url(../../../../public/media/fonts/Ikea/NotoIKEAArabic_Latin-Regular.woff) format('truetype');
+}
+@font-face {
+    font-family: 'SemiBold';
+    src: url(../../../../public/media/fonts/Ikea/NotoIKEAArabic_Latin-Bold.woff) format('truetype');
+}
+@font-face {
+    font-family: 'Bold';
+    src: url(../../../../public/media/fonts/Ikea/NotoIKEAArabic_Latin-Bold.woff) format('truetype');
+}
+@font-face {
+    font-family: 'ExtraBold';
+    src: url(../../../../public/media/fonts/Ikea/NotoIKEAArabic_Latin-Bold.woff) format('truetype');
+}
+@font-face {
+    font-family: 'ExtraBold';
+    src: url(../../../../public/media/fonts/Ikea/NotoIKEAArabic_Latin-Bold.woff) format('truetype');
+}
